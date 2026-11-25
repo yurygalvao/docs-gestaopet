@@ -1,0 +1,86 @@
+---
+sidebar_position: 1
+title: Instalação
+description: Como baixar, instalar as dependências e executar a API do GestãoPet.
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Instalação
+
+## Pré-requisitos
+
+- **Python 3.12** ou superior (`python --version`).
+- **Git**, para baixar o código.
+
+## 1. Baixe o código
+
+```bash
+git clone https://github.com/yurygalvao/gestaopet-fastapi.git
+cd gestaopet-fastapi
+```
+
+## 2. Crie o ambiente virtual e instale as dependências
+
+O ambiente virtual (`.venv`) mantém as bibliotecas do projeto separadas das do resto do computador. O comando de ativação muda conforme o sistema operacional:
+
+<Tabs groupId="sistema-operacional">
+  <TabItem value="windows" label="Windows" default>
+
+```powershell
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+  </TabItem>
+  <TabItem value="linux" label="Linux (Ubuntu)">
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+  </TabItem>
+</Tabs>
+
+:::tip[Confira a ativação]
+Com o ambiente ativo, o terminal mostra `(.venv)` no início da linha. Se não aparecer, o `pip install` vai instalar as bibliotecas no Python do sistema.
+:::
+
+## 3. Execute o servidor
+
+```bash
+fastapi dev app/main.py
+```
+
+O servidor sobe em `http://127.0.0.1:8000` e reinicia sozinho quando um arquivo é salvo. Na primeira execução, o arquivo `gestaopet.db` é criado com as tabelas vazias.
+
+## 4. Rode os testes (opcional)
+
+<Tabs groupId="sistema-operacional">
+  <TabItem value="windows" label="Windows" default>
+
+```powershell
+pytest -v
+```
+
+  </TabItem>
+  <TabItem value="linux" label="Linux (Ubuntu)">
+
+```bash
+python3 -m pytest -v
+```
+
+  </TabItem>
+</Tabs>
+
+Os testes usam um banco em memória e não alteram o `gestaopet.db`.
+
+:::warning[Banco de outro ambiente]
+Para usar PostgreSQL em vez de SQLite, crie um arquivo `.env` com `DATABASE_URL=postgresql://usuario:senha@servidor/gestaopet`. Nunca envie o `.env` para o GitHub: ele já está no `.gitignore`.
+:::
+
+Com o servidor rodando, siga para os [Primeiros passos](./primeiros-passos.md).

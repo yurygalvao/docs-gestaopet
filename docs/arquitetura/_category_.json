@@ -1,0 +1,9 @@
+{
+  "label": "Arquitetura",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "slug": "/category/arquitetura",
+    "description": "Camadas, modelo de dados e padrões de projeto do GestãoPet."
+  }
+}

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" font-family="Segoe UI, Roboto, Arial, sans-serif">
+  <title>Camadas do GestãoPet</title>
+  <rect width="640" height="360" rx="12" fill="#f5f7fb"/>
+  <defs>
+    <marker id="seta" viewBox="0 0 10 10" refX="5" refY="9" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 L10 0 L5 10 z" fill="#5b6b8c"/>
+    </marker>
+  </defs>
+  <g font-size="16" text-anchor="middle">
+    <rect x="120" y="20" width="400" height="50" rx="8" fill="#e8eefc" stroke="#3b5bdb" stroke-width="2"/>
+    <text x="320" y="44" font-weight="700" fill="#1c2b5a">Routers</text>
+    <text x="320" y="62" font-size="12" fill="#43507a">HTTP, validação Pydantic (DTOs)</text>
+
+    <rect x="120" y="105" width="400" height="50" rx="8" fill="#e6f6ee" stroke="#2f9e63" stroke-width="2"/>
+    <text x="320" y="129" font-weight="700" fill="#14472c">Services</text>
+    <text x="320" y="147" font-size="12" fill="#2f5a43">regras de negócio, exceções de domínio</text>
+
+    <rect x="120" y="190" width="400" height="50" rx="8" fill="#fff4e0" stroke="#d9881a" stroke-width="2"/>
+    <text x="320" y="214" font-weight="700" fill="#5a3708">Repositories</text>
+    <text x="320" y="232" font-size="12" fill="#6b4a1c">consultas SQLAlchemy (Unit of Work)</text>
+
+    <rect x="120" y="275" width="400" height="60" rx="8" fill="#f1e8fb" stroke="#7d4fc4" stroke-width="2"/>
+    <text x="320" y="301" font-weight="700" fill="#371a63">Banco SQLite</text>
+    <text x="320" y="320" font-size="12" fill="#4f3a73">tabelas tutores e pets</text>
+  </g>
+  <g stroke="#5b6b8c" stroke-width="2" marker-end="url(#seta)">
+    <line x1="320" y1="72" x2="320" y2="100"/>
+    <line x1="320" y1="157" x2="320" y2="185"/>
+    <line x1="320" y1="242" x2="320" y2="270"/>
+  </g>
+</svg>
